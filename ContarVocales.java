@@ -4,6 +4,15 @@ public class ContarVocales {
 	}
 
 	public static int contarVocales(String frase) {
-		return 0;
+		String[] letras = frase.split("");
+		int cont = 0;
+
+		for(String letra : letras) {
+			if(letra.matches("[AEIOUaeiou]")) {
+				cont++;
+			}
+		}
+
+		return cont;
 	}
 }
