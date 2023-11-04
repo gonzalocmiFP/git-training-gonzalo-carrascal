@@ -11,6 +11,13 @@ public class EliminarCaracteres {
 
 	/** Elimina la primera y ultima letra */
 	public static String eliminar(String str) {
-		return null;
+		if (str == null || str.length() <= 1) {
+			return "";
+		}else {
+			StringBuilder resultado = new StringBuilder(str);
+			resultado.deleteCharAt(0);
+			resultado.deleteCharAt(resultado.length()-1);
+			return resultado.toString();
+		}
 	}
 }
